@@ -1,5 +1,11 @@
+#provider "azurerm" {
+#  features {}
+#  subscription_id = var.subsId
+#  client_id       = var.clientId
+#  client_secret   = var.clientSecret
+#  tenant_id       = var.tenantId
+#}
 
- 
 resource "azurerm_resource_group" "kr_tfc_mysqlsrv-rg" {
   name     = "kr_tfc_mysqlsrv-rg"
   location = "${var.location}"
