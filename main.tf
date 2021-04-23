@@ -1,22 +1,10 @@
-#provider "azurerm" {
-#  features {}
-#  subscription_id = var.subsId
-#  client_id       = var.clientId
-#  client_secret   = var.clientSecret
-#  tenant_id       = var.tenantId
-#}
-
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = ">= 2.26"
-    }
-  }
-}
-
 provider "azurerm" {
   features {}
+
+  subscription_id = var.subsId
+  client_id       = var.clientId
+  client_secret   = var.clientSecret
+  tenant_id       = var.tenantId
 }
 
 resource "azurerm_resource_group" "kr_tfc_mysqlsrv-rg" {
