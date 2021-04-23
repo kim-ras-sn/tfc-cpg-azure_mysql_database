@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "kr_tfc_mysqldb-rg" {
   location = "${var.location}"
 }
  
-resource "azurerm_mysql_server" "mysql_server_instance1" {
+resource "azurerm_mysql_server" "mysqldb-instance1" {
   name                = "${var.stack_name}"
   location            = azurerm_resource_group.kr_tfc_mysqldb-rg.location
   resource_group_name = azurerm_resource_group.kr_tfc_mysqldb-rg.name
