@@ -18,15 +18,14 @@ variable "bbdd_admin_pwd"{
   default = "H@Sh1CoR3!"
 }
 
-#variable "subsId" {
-    
-#}
+variable "subsId" {  
+}
  
-#variable "clientId" {
-#}
+variable "clientId" {
+}
  
-#variable "clientSecret" {
-#}
- 
-#variable "tenantId" {
-#}
+variable "clientSecret" {
+}
+
+variable "tenantId" {
+}
