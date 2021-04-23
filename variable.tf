@@ -1,6 +1,6 @@
 variable "stack_name" {
   type    = string
-  default = "kr_tfc_mysqlsrv-inst1"
+  default = "kr-tfc-mysqldb001"
 }
  
 variable "location" {
