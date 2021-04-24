@@ -10,19 +10,20 @@ provider "azurerm" {
 resource "azurerm_resource_group" "cpg-tfc-mysqldb-rg" {
   name     = "cpg-tfc-mysqldb-rg"
   location = "${var.location}"
+  tags = {
+    CostCenter = "${var.costcenter}"
+    stack = "${var.StackName}"
+  }
 }
  
 resource "azurerm_mysql_server" "mysqldb-instance1" {
   name                = "${var.db_name}"
   location            = azurerm_resource_group.cpg-tfc-mysqldb-rg.location
   resource_group_name = azurerm_resource_group.cpg-tfc-mysqldb-rg.name
- 
+  tags                = azurerm_resource_group.cpg-tfc-mysqldb-rg.tags
+  
   administrator_login          = "${var.bbdd_admin_user}"
   administrator_login_password = "${var.bbdd_admin_pwd}"
-  
-  tags = {
-    CostCenter = "${var.costcenter}"
-  }
  
   sku_name   = "B_Gen5_2"
   storage_mb = 5120
