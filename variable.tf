@@ -8,6 +8,11 @@ variable "location" {
   default = "West Europe"
 }
 
+variable "StackName" {
+  type = string
+  default = ""
+}
+
 variable "costcenter" {
   type = string
   default = ""
