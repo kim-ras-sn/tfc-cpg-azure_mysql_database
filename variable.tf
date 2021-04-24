@@ -1,4 +1,4 @@
-variable "stack_name" {
+variable "db_name" {
   type    = string
   default = "kr-tfc-mysqldb001"
 }
@@ -6,6 +6,11 @@ variable "stack_name" {
 variable "location" {
   type = string
   default = "West Europe"
+}
+
+variable "costcenter" {
+  type = string
+  default = ""
 }
  
 variable "bbdd_admin_user"{
