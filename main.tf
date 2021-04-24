@@ -21,7 +21,7 @@ resource "azurerm_mysql_server" "mysqldb-instance1" {
   administrator_login_password = "${var.bbdd_admin_pwd}"
   
   tags = {
-    CostCenter = "${var.CostCenter}"
+    CostCenter = "${var.costcenter}"
   }
  
   sku_name   = "B_Gen5_2"
