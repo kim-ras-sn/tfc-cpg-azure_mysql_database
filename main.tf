@@ -7,15 +7,15 @@ provider "azurerm" {
   tenant_id       = var.tenantId
 }
 
-resource "azurerm_resource_group" "kr-tfc-mysqldb-rg" {
-  name     = "kr-tfc-mysqldb-rg"
+resource "azurerm_resource_group" "cpg-tfc-mysqldb-rg" {
+  name     = "cpg-tfc-mysqldb-rg"
   location = "${var.location}"
 }
  
 resource "azurerm_mysql_server" "mysqldb-instance1" {
   name                = "${var.db_name}"
-  location            = azurerm_resource_group.kr_tfc_mysqldb-rg.location
-  resource_group_name = azurerm_resource_group.kr_tfc_mysqldb-rg.name
+  location            = azurerm_resource_group.cpg-tfc-mysqldb-rg.location
+  resource_group_name = azurerm_resource_group.cpg-tfc-mysqldb-rg.name
  
   administrator_login          = "${var.bbdd_admin_user}"
   administrator_login_password = "${var.bbdd_admin_pwd}"
