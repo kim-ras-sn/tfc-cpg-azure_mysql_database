@@ -2,4 +2,4 @@
 This Repository is for demo of ServiceNow Cloud Provisioning and Governance (CPG)
 Use on own risk
 
-This is for creating a simple MySql database instnce
+This is for creating a simple MySql database server insstance
