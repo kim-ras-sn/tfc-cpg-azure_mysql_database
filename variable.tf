@@ -1,6 +1,6 @@
-variable "db_name" {
+variable "dbsrv_name" {
   type    = string
-  default = "kr-tfc-mysqldb001"
+  default = "kr-tfc-mysqlsrv001"
 }
  
 variable "location" {
