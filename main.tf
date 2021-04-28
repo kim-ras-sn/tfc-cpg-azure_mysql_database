@@ -8,7 +8,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "cpg-tfc-mysqlsrv-rg" {
-  name     = "cpg-tfc-mysqlsrv-rg"
+  name     = "cpg-${var.StackName}-rg"
   location = "${var.location}"
   tags = {
     CostCenter = "${var.costcenter}"
