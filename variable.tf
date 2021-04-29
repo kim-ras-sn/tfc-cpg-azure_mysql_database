@@ -1,8 +1,3 @@
-variable "dbsrv_name" {
-  type    = string
-  default = "kr-tfc-mysqlsrv001"
-}
- 
 variable "location" {
   type = string
   default = "West Europe"
