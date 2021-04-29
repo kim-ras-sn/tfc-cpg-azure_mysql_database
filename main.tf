@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "cpg-tfc-mysqlsrv-rg" {
 }
  
 resource "azurerm_mysql_server" "mysqldb-instance1" {
-  name                = "${var.dbsrv_name}"
+  name                = "cpg-mysql-${var.StackName}"
   location            = azurerm_resource_group.cpg-tfc-mysqlsrv-rg.location
   resource_group_name = azurerm_resource_group.cpg-tfc-mysqlsrv-rg.name
   tags                = azurerm_resource_group.cpg-tfc-mysqlsrv-rg.tags
